@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <title>H-Genie</title>
+
+    <link rel="stylesheet" type="text/css" href="index/page3d.css">
+    <link rel="stylesheet" type="text/css" href="index/page1/page1.css">
+    <link rel="stylesheet" type="text/css" href="index/page2/page2.css">
+    <link rel="stylesheet" type="text/css" href="index/page3/page3.css">
+    <link rel="stylesheet" type="text/css" href="index/page4/page4.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.css">
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container">
+
+		<div class="wrapper">
+
+			<div class="page" id="page1">
+                <%- include('page1') %>
+            </div>
+
+			<div class="page" id="page3">
+                <%- include('page3') %>
+            </div>
+
+			<div class="page" id="page2">
+                <%- include('page2') %>
+            </div>
+
+            <div class="page" id="page4">
+                <%- include('page4') %>
+            </div>
+
+		</div>
+
+	</div>
+
+	<ul id=indicator></ul>
+    <script src="index/page3d.js"></script>
+
+</body>
+</html>

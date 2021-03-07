@@ -1,0 +1,230 @@
+<section class="section_page1">
+
+    <div class="cyworld">
+
+        <div class="cyworld_left">
+
+            <div class="left_exterior">
+
+                <div class="left_interior">
+
+                    <span class="ring"></span>
+                    <span class="ring"></span>
+                    <span class="ring"></span>
+                    <span class="ring"></span>
+
+                    <div class="left_interior_top">
+                        <div class="today_is">
+                            <h6>TODAY IS...</h6>
+                            <img src="https://icons8.github.io/flat-color-icons/svg/close_up_mode.svg" alt="flower">
+                            <p>행복해요</p>
+                        </div>
+
+                        <div class="profile_picture">
+                            <img src="index/page1/profile.jpg" alt="profile">
+                        </div>
+                        <div class="profile_text">
+                            <div class="information">
+                                <p></p>
+                                <p>GPS를 허용해주세요</p>
+                                <p>GPS를 허용해주세요</p>
+                            </div>                            
+                        </div>
+                    </div> <!--left_interior_top-->
+
+                    <div class="left_interior_bottom">
+
+                        <div class="edit_history">
+                            <div>
+                                <div class="triangle rotate_180deg"></div>
+                                <p>EDIT</p>
+                                <div class="triangle rotate_180deg"></div>
+                                <p>HISTORY</p>
+                            </div>
+                            
+                            <div>
+                                <div class="triangle rotate_270deg" style="margin: 3px 1px 0 0;"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+
+                        <div class="name">
+                            <h5>서형진</h5>
+                            <p>1986.04.14</p>
+                        </div>
+
+                        <div class="badge">
+                            <div><img src="https://icons8.github.io/flat-color-icons/svg/like.svg" alt="heart"></div>
+                            <div><img src="https://icons8.github.io/flat-color-icons/svg/old_time_camera.svg" alt="camera"></div>
+                            <div><img src="https://icons8.github.io/flat-color-icons/svg/graduation_cap.svg" alt="mortarboard"></div>
+                        </div>
+                        
+                        <select class="select_box" onchange="window.open(options[selectedIndex].value);">
+                            <option disabled selected>파도타기</option>
+                            <option value="https://h-genie.github.io/hugeinc">Huge Inc.</option>
+                            <option value="https://genie-netflix.herokuapp.com">Netflix</option>
+                            <option value="https://h-genie.github.io/naver">Naver Corp.</option>
+                            <option value="https://h-genie.github.io/genesis">Genesis</option>
+                            <option value="https://h-genie.github.io/flag-game">청기백기 게임</option>
+                            <option value="https://h-genie.github.io/nwitter">Nwitter</option>
+                            <option value="https://www.vomacademy.com">봄아카데미</option>
+                        </select>
+
+                    </div> <!--left_interior_bottom-->
+
+                </div> <!--left_interior-->
+
+            </div> <!--left_exterior-->
+
+        </div> <!--cyworld_left-->
+
+        <div class="cyworld_right">
+
+            <div class="right_exterior">
+
+                <div class="band" onclick="changeColor(0); change_page(1)"><h6>Home</h6></div>
+                <div class="band" onclick="changeColor(1); change_page(2)"><h6>Portfolio</h6></div>
+                <div class="band" onclick="changeColor(2); change_page(3)"><h6>Resume</h6></div>
+                <div class="band" onclick="changeColor(3); change_page(4)"><h6>Story</h6></div>                
+
+                <div class="right_interior">
+
+                    <div class="right_interior_top">
+                        <div class="title">
+                            <h5>ⓦelcømё て♡ GЁЙIЭĿÅПÐ ~~♬</h5>
+                        </div>
+
+                        <img src="index/page1/miniroom.jpg" alt="miniroom">
+                        <div class="miniroom">
+                            <div class="triangle rotate_180deg"></div>
+                            <p>미니룸 설정</p>
+                            <div class="triangle rotate_180deg"></div>
+                            <p>미니미 설정</p>
+                        </div>
+                    </div> <!--right_interior_top-->
+
+                    <div class="right_interior_bottom">
+
+                        <div class="friends_say" style="margin-top: 19px;">
+                            <h6>Friends Say</h6>
+                            <form method="POST" action="create" autocomplete="off">
+                                <input
+                                    style="width: 400px;"
+                                    type="text" 
+                                    name="comment" 
+                                    maxlength="25"
+                                    placeholder="일촌과 나누고 싶은 이야기를 남겨보세요~! (최대 25자)" 
+                                    onclick="displayToggle()"
+                                    value=
+                                    "<% if(modify !== undefined) { %>
+                                        <%= modify[0].comment %>"
+                                    <% } %>"
+                                >
+                                <div class="input_comment">
+                                    <input 
+                                        style="width: 200px;"
+                                        type="text" 
+                                        name="user" 
+                                        maxlength="16"
+                                        placeholder="일촌명 (최대 16자)"
+                                    >
+                                    <input 
+                                        style="width: 200px;"
+                                        type="password" 
+                                        name="password" 
+                                        minlength="4"
+                                        maxlength="12"
+                                        placeholder="비밀번호 (4~12자)"
+                                    >
+                                </div>
+                                <button><p>작성</p></button>
+                            </form>
+                        </div>
+                        
+                        <% for(let i=0; i<result.length; i++) { 
+                            let date = result[i].date;
+                            let string = date.toString();
+                            let month;
+                            switch(string.slice(4,7)) {
+                                case "Jan" : month="01"; break;
+                                case "Feb" : month="02"; break;
+                                case "Mar" : month="03"; break;
+                                case "Apr" : month="04"; break;
+                                case "May" : month="05"; break;
+                                case "Jun" : month="06"; break;
+                                case "Jul" : month="07"; break;
+                                case "Aug" : month="08"; break;
+                                case "Sep" : month="09"; break;
+                                case "Oct" : month="10"; break;
+                                case "Nov" : month="11"; break;
+                                case "Dec" : month="12"; break;
+                            }
+                            var slice = `${string.slice(11,15)}-${month}-${string.slice(8,11)}`;
+                        %>
+                            <div class="comment">
+                                <div class="comment_left">
+                                    <div class="dot"></div>
+                                    <p><%= result[i].comment %></p>
+                                    <p>(<%= result[i].user %>)</p>
+                                    <p><%= slice %></p>
+                                </div>
+                                <div class="comment_right">
+                                    <div class="update_box">
+                                        <form method="POST" action="modify" autocomplete="off">
+                                            <input 
+                                                type="hidden" 
+                                                name="id" 
+                                                value="<%= result[i].id %>"
+                                            >
+                                            <input 
+                                                style="border: 1px solid #DECBC8;"
+                                                type="password" 
+                                                name="password" 
+                                                placeholder="수정 : 비밀번호 입력"
+                                                onclick="fixedInput(this)"
+                                            >
+                                            <input type="submit">
+                                        </form>
+                                    </div>
+
+                                    <div class="delete_box">
+                                        <form method="POST" action="delete" autocomplete="off">
+                                            <input 
+                                                type="hidden" 
+                                                name="id" 
+                                                value="<%= result[i].id %>"
+                                            >
+                                            <input 
+                                                style="border: 1px solid #DECBC8;"
+                                                type="password" 
+                                                name="password" 
+                                                placeholder="삭제 : 비밀번호 입력" 
+                                                onclick="fixedInput(this)"
+                                            >
+                                            <input type="submit">
+                                        </form>
+                                    </div>
+
+                                    <i class="fas fa-pencil-alt" onclick="clickUpdate(this)"></i>
+                                    <i class="fas fa-trash" onclick="clickDelete(this)"></i>
+                                </div>
+                            </div>
+                        <% } %>
+
+                    </div> <!--right_interior_bottom-->
+                    
+                    
+                </div> <!--right_interior-->
+
+            </div> <!--right_exterior-->
+
+        </div> <!--cyworld_right-->
+
+    </div> <!--cyworld-->
+
+</section>
+
+<script src="index/page1/clock.js"></script>
+<script src="index/page1/weather.js"></script>
+<script src="index/page1/change_color.js"></script>
+<script src="index/page1/comment.js"></script>

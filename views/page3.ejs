@@ -1,0 +1,43 @@
+<div class="section_page3">
+    <div class="fixed_box"><h6>휠을 위아래로 움직여주세요</h6></div>
+
+    <div id="fullpage">
+        
+        <div class="section">
+            <%- include('page3-1') %>
+        </div>
+
+        <div class="section">
+            <%- include('page3-2') %>
+        </div>
+
+        <div class="section">
+            <%- include('page3-3') %>
+        </div>
+
+        <div class="section">
+            <%- include('page3-4') %>
+        </div>
+
+        <div class="section">
+            <%- include('page3-5') %>
+        </div>
+
+        <div class="section">
+            <%- include('page3-6') %>
+        </div>
+
+        <div class="section">
+            <%- include('page3-7') %>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        normalScrollElements : '#page1, #page2, #page4',
+        keyboardScrolling : false
+    });
+</script>
+<script src="index/page3/modal.js"></script>

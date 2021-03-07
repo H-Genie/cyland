@@ -1,0 +1,73 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Genie</title>
+    
+    <style>
+        @font-face {font-family: SCDream4; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff')}
+        body {font-family: SCDream4;}
+
+        form {display: flex; flex-direction: column; width: 360px; background-color: #85C8F2; border-radius: 20px;}
+        label {padding: 10px 20px;}
+        label:nth-of-type(1) {padding-top: 20px;}
+        label:nth-of-type(3) {padding-bottom: 20px;}
+        div {display: flex;}        
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="update" autocomplete="off">
+
+        <input type="hidden" name="id" value="<%= result[0].id %>">
+
+        <label>
+            일촌명 : 
+            <input 
+                style="width: 257px;"
+                type="text" 
+                name="user" 
+                maxlength="16"
+                placeholder="최대 16자"
+                value="<%= result[0].user %>"
+            >
+        </label>
+        
+        <label>
+            비밀번호 : 
+            <input 
+                style="width: 241px;"
+                type="password" 
+                name="password" 
+                minlength="4"
+                maxlength="12"
+                placeholder="4~12자"
+                value="<%= result[0].password %>"
+            >
+        </label>
+
+        <label>
+            일촌평 : 
+            <input 
+                style="width: 257px;"
+                type="text" 
+                name="comment" 
+                maxlength="25"
+                placeholder="최대 25자"
+                value="<%= result[0].comment %>"
+            >
+        </label>
+
+        <div>
+            <button onclick="goBack()" style="margin: 0 0 20px 20px; font-family: SCDream4;">돌아가기</button>
+            <input type="submit" style="margin: 0 0 20px 10px; font-family: SCDream4;" value="수정">
+        </div>  
+    </form>
+
+    <script>
+        goBack = () => {
+            window.history.back()
+        }
+    </script>
+</body>
+</html>
