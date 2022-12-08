@@ -1,5 +1,6 @@
 import React from 'react';
 import { ModalHuge, ModalFlag, ModalVom } from '../../../modules/useModal';
+import { selectOptions as page } from '../../LeftInterior/sections/PortfolioSelect';
 
 class Portfolio {
     constructor(classification, title, language, description, study, range, img, link) {
@@ -23,7 +24,7 @@ export const cyland = new Portfolio(
     "메인 컴포넌트 + 라우터 컴포넌트 3",
     "./images/portfolio/cyland.jpg",
     {
-        코드: "https://github.com/H-Genie/node.cyland"
+        코드: "https://github.com/H-Genie/cyland"
     }
 )
 
@@ -36,8 +37,8 @@ export const pagination = new Portfolio(
     "메인 컴포넌트, 상세 컴포넌트 (토글)",
     "./images/portfolio/pagination.jpg",
     {
-        포트폴리오: "https://genie-pagination.herokuapp.com",
-        코드: "https://github.com/H-Genie/api-test"
+        포트폴리오: page[1].value,
+        코드: "https://github.com/H-Genie/pagination"
     }
 )
 
@@ -50,7 +51,7 @@ export const pokemon = new Portfolio(
     "메인 컴포넌트, 캐릭터별 라우터, 캐릭터 상세정보 컴포넌트(탭)",
     "./images/portfolio/pokemon.jpg",
     {
-        포트폴리오: "https://genie-pokemon.herokuapp.com",
+        포트폴리오: page[2].value,
         코드: "https://github.com/H-Genie/pokemon"
     }
 )
@@ -65,7 +66,7 @@ export const movieapp = new Portfolio(
     "메인 컴포넌트 + 영화 상세 라우터 + 배우 상세 라우터",
     "./images/portfolio/movieapp.jpg",
     {
-        포트폴리오: "https://genie-movieapp.herokuapp.com",
+        포트폴리오: page[3].value,
         코드: "https://github.com/H-Genie/movieapp"
     }
 )
@@ -79,7 +80,7 @@ export const todo = new Portfolio(
     "메인 컴포넌트",
     "./images/portfolio/todo.jpg",
     {
-        포트폴리오: "https://h-genie.github.io/todo",
+        포트폴리오: page[4].value,
         코드: "https://github.com/H-Genie/todo"
     }
 )
@@ -93,7 +94,7 @@ export const genesis = new Portfolio(
     "메인페이지 / 반응형",
     "./images/portfolio/genesis.jpg",
     {
-        포트폴리오: "https://h-genie.github.io/genesis",
+        포트폴리오: page[5].value,
         코드: "https://github.com/H-Genie/genesis",
     }
 )
@@ -107,7 +108,7 @@ export const flag = new Portfolio(
     "메인페이지, 백그라운드 로직, 반응형",
     "./images/portfolio/flag.jpg",
     {
-        포트폴리오: "https://h-genie.github.io/flag-game",
+        포트폴리오: page[6].value,
         코드: "https://github.com/H-Genie/flag-game",
         로직: <ModalFlag />
     }
@@ -122,7 +123,7 @@ export const huge = new Portfolio(
     "메인페이지 + 서브페이지 4개 / 반응형",
     "./images/portfolio/huge.jpg",
     {
-        포트폴리오: "https://h-genie.github.io/hugeinc",
+        포트폴리오: page[7].value,
         코드: "https://github.com/H-Genie/hugeinc",
         박스모델: <ModalHuge />
     }
@@ -137,7 +138,7 @@ export const netflix = new Portfolio(
     "메인페이지 / 반응형",
     "./images/portfolio/netflix.jpg",
     {
-        포트폴리오: "https://h-genie.github.io/netflix",
+        포트폴리오: page[8].value,
         코드: "https://github.com/H-Genie/netflix"
     }
 )
@@ -151,7 +152,7 @@ export const naver = new Portfolio(
     "메인페이지 / 반응형",
     "./images/portfolio/naver.jpg",
     {
-        포트폴리오: "https://h-genie.github.io/naver",
+        포트폴리오: page[9].value,
         코드: "https://github.com/H-Genie/naver",
         캐러셀로직: "https://h-genie.github.io/study/javascript_slide.html"
     }
@@ -166,7 +167,7 @@ export const vom = new Portfolio(
     "메인페이지 6 + 서브페이지 9 + 관리자 페이지 + 백엔드 / 반응형",
     "./images/portfolio/vom.jpg",
     {
-        사이트: "https://vomacademy.com",
+        사이트: page[10].value,
         디자인가이드: "https://xd.adobe.com/view/d2c60d54-3c38-4f9b-76b2-f2bffc1012e4-a4f7",
         플로우차트: <ModalVom />
     }

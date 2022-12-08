@@ -13,10 +13,14 @@ const customStyles = {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
+        border: 'none',
         padding: 0,
+        marginBottom: -1,
         background: 'transparent',
-        width: 'min-content',
-        height: '-webkit-fill-available'
+        maxWidth: 1280,
+        maxHeight: '80%',
+        width: 'fit-content',
+        height: 'fit-content'
     },
 };
 
@@ -88,5 +92,6 @@ export const ModalVom = () => {
 }
 
 const Img = styled.img`
-    height : 100%;
+    max-width: -webkit-fill-available;
+    width: 100%;
 `;
