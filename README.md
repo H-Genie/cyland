@@ -1,3 +1,3 @@
 https://h-genie.com
 
-https://cyland.onrender.com
+https://cyland-next.vercel.app
